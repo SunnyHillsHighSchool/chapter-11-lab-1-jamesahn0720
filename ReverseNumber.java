@@ -8,18 +8,45 @@ public class ReverseNumber
 {
    private int number;
 
- //add constructors
+ ReverseNumber() {
+
+number = 0;
+
+}
  
- 
- //add a set method
+ReverseNumber(int num) {
+
+number = num;
+
+}
+
+public int getNumber() {
+
+return number;
+
+}
+
+public void setNumber(int number) {
+
+this.number = number;
+
+}
 
 
  public int getReverse()
  {
-  int rev=0;  
+  int rev=0, temp = number;
+    while (temp!= 0) {
+       rev = rev * 10 + temp % 10;
+       temp = temp / 10;
+    }
   return rev;
  }
 
- //add  a toString 
+public String toString() {
+
+return "ReverseNumber [number=" + number + "]";
+
+} 
  
 }
